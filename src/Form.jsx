@@ -19,7 +19,7 @@ const Form = () => {
     formData.append("image", image);
 
     try {
-      await axios.post("http://localhost:5000/api/submitForm", formData, {
+      await axios.post("https://upload-form-back.onrender.com/api/submitForm", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("Form submitted successfully");

@@ -7,7 +7,7 @@ const FormList = () => {
   useEffect(() => {
     const fetchForms = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/getForms");
+        const response = await axios.get("https://upload-form-back.onrender.com/api/getForms");
         setForms(response.data);
       } catch (error) {
         console.error(error);
@@ -25,7 +25,7 @@ const FormList = () => {
           <h3>{form.name}</h3>
           <p>{form.details}</p>
           <img
-            src={`http://localhost:5000/uploads/${form.image}`}
+            src={`https://upload-form-back.onrender.com/uploads/${form.image}`}
             alt={form.name}
             style={{ width: "350px", height: "300px" }}
           />
